@@ -12,7 +12,7 @@ RUN     apk add --no-cache git libevent-dev openssl-dev gcc make automake ca-cer
             --disable-asciidoc \
             --sysconfdir=/etc \
             --disable-unittests && \
-        make && make install && \
+        make install -j 10 && \
         cd .. && \
         rm -rf tor && \
         apk add --no-cache python3 python3-dev && \
