@@ -7,7 +7,6 @@ RUN     apk add --no-cache git libevent-dev openssl-dev gcc make automake ca-cer
         mkdir -p /usr/local/src/ && \
         git clone https://git.torproject.org/tor.git /usr/local/src/tor && \
         cd /usr/local/src/tor && \
-        git checkout tor-${TOR_VERSION} && \
         ./autogen.sh && \
         ./configure \
             --disable-asciidoc \
